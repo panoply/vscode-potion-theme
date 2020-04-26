@@ -6,7 +6,7 @@
 
 ### Preview
 
-<img src="preview.png" width="100%">
+<img src="https://github.com/panoply/vscode-material-potion/blob/master/preview.png?raw=true" width="100%">
 
 
 ### Settings Recommendation

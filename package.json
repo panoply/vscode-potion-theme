@@ -2,18 +2,18 @@
     "name": "material-potion",
     "publisher": "sissel",
     "displayName": "Material Potion",
-    "description": "A dark material X monokai variation color theme for vscode.",
-    "version": "0.0.1",
+    "description": "A dark material meets monokai variation color theme for vscode.",
+    "version": "0.0.2",
     "icon": "logo.png",
     "author": "Nikolas Savvidis <nicos@gmx.com>",
     "license": "CC-BY-NC-ND-4.0",
     "keywords": ["theme", "material potion", "monokai", "dark"],
     "repository": {
       "type": "git",
-      "url": "https://github.com/panoply/vscode-liquid.git"
+      "url": "https://github.com/panoply/vscode-material-potion.git"
     },
     "bugs": {
-      "url": "https://github.com/panoply/vscode-liquid/issues"
+      "url": "https://github.com/panoply/vscode-material-potion/issues"
     },
     "engines": {
         "vscode": "^1.44.0"

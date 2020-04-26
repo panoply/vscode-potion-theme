@@ -1,18 +1,21 @@
 ## Material Potion (vscode theme)
 
-[VSCode](#) dark color theme variation of the [Material](#). Implements a [Monokai](#) flavor and cosmic-like syntax colouring on an obsidian black workspace. Material Poition extends JavaScript, HTML and Elixir syntaxes.
+[VSCode](https://code.visualstudio.com/) dark color theme variation of the [Material](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme) theme. Implements a [Monokai](https://monokai.nl/) flavor and cosmic-like syntax colouring on an obsidian black workspace. Material Potion extends JavaScript, HTML and Elixir syntaxes.
 
-> There are no plans to bring wide spread support to this theme as its merely an export generated from within vscode.
+> There are no plans to bring widespread support to this theme as its merely an export generated from within vscode and is public to provide an easy way for others to install and use.
 
 ### Preview
 
-<img src="./preview.png" width="100%">
+<img src="preview.png" width="100%">
 
 
-### Reccommendation
+### Settings Recommendation
 
-```json
+```jsonc
 {
+  "breadcrumbs.enabled": false,
+  "breadcrumbs.icons": true,
+  "breadcrumbs.filePath": "last",
   "editor.minimap.enabled": false,
   "editor.matchBrackets": "always",
   "editor.renderWhitespace": "boundary",
@@ -20,6 +23,7 @@
   "editor.cursorSmoothCaretAnimation": true,
   "editor.fontSize": 17.2,
   "editor.codeLens": true,
+  "editor.cursorStyle": "line-thin",
   "editor.tabSize": 2,
   "editor.letterSpacing": 0.10,
   "editor.lineHeight": 20,
@@ -33,11 +37,23 @@
   "editor.wordWrapColumn": 96,
   "editor.detectIndentation": true,
   "editor.renderIndentGuides": true,
+  "editor.overviewRulerBorder": false,
+  "editor.fastScrollSensitivity": 5,
+  "editor.renderControlCharacters": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.autoReveal": true,
+  "debug.showInStatusBar": "always",
+  "window.zoomLevel": 0,
+  "window.restoreFullscreen": true,
+  "window.nativeTabs": false,
+  "window.titleBarStyle": "native",
+  "workbench.sideBar.location": "left",
   "workbench.tree.indent": 5,
   "workbench.tree.renderIndentGuides": "none",
   "workbench.fontAliasing": "default",
-  "editor.overviewRulerBorder": false,
-  "editor.fastScrollSensitivity": 5,
+  "workbench.activityBar.visible": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.showTabs": true,
 }
 ```
 

@@ -1,0 +1,21 @@
+{
+    "name": "potion",
+    "displayName": "Material Potion",
+    "description": "A dark material X monokai variation color theme for vscode.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.44.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Material Potion",
+                "uiTheme": "vs-dark",
+                "path": "./themes/material-potion-color-theme.json"
+            }
+        ]
+    }
+}

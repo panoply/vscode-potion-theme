@@ -2,6 +2,10 @@
 
 All notable changes to the "material-potion" colour theme will be documented in this file. The theme is merely customized according to personal tastes.
 
+## [0.0.5]
+
+- Update Logo
+
 ## [0.0.4]
 
 - Name change from "Material Potion" to "Potion Theme"

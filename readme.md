@@ -1,12 +1,12 @@
-## Material Potion (vscode theme)
+## Potion Theme (vscode theme)
 
-[VSCode](https://code.visualstudio.com/) dark color theme variation of the [Material](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme) theme. Implements a [Monokai](https://monokai.nl/) flavor and cosmic-like syntax colouring on an obsidian black workspace. Material Potion extends JavaScript, HTML and Elixir syntaxes.
+[VSCode](https://code.visualstudio.com/) dark color theme variation of the [Material](https://marketplace.visualstudio.com/items?itemName=Equinusocio.vsc-material-theme) theme. Implements a [Monokai](https://monokai.nl/) flavor and cosmic-like syntax colouring on an obsidian black workspace. Material Potion extends JavaScript, HTML/Liquid and Elixir syntaxes.
 
-> There are no plans to bring widespread support to this theme as its merely an export generated from within vscode and is public to provide an easy way for others to install and use.
+> There are no plans to bring widespread support to this theme at the current point in time.Its merely an export generated from within vscode and is public to provide an easy way for others to install and use.
 
 ### Preview
 
-<img src="https://github.com/panoply/vscode-material-potion/blob/master/preview.png?raw=true" width="100%">
+<img src="https://github.com/panoply/vscode-potion-theme/blob/master/preview.png?raw=true" width="100%">
 
 
 ### Settings Recommendation

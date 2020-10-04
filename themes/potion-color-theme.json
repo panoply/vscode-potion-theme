@@ -1073,7 +1073,7 @@
 		{
 			"scope": "variable.other.constant.property.js",
 			"settings": {
-				"foreground": "#FFFFFF"
+				//"foreground": "#FFFFFF"
 			}
 		},
 		{
@@ -1158,7 +1158,9 @@
 		},
 		{
 			"scope": "variable.object.property.js",
-			"settings": {}
+			"settings": {
+				//"foreground": "#9EE34F",
+			}
 		},
 		{
 			"scope": "punctuation.separator.key-value.js",
@@ -1203,8 +1205,8 @@
 		{
 			"scope": "punctuation.separator.comma.js",
 			"settings": {
-				"foreground": "#FFFFFF",
-				"fontStyle": "bold"
+				//"foreground": "#F92672",
+				//"fontStyle": "bold"
 			}
 		},
 		{

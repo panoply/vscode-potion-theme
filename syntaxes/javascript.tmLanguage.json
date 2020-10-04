@@ -1,0 +1,34 @@
+{
+
+  "scopeName": "source.js.potion",
+  "injectionSelector": "L:source.js -meta.arrow.js",
+  "patterns": [
+    {
+      "include": "#parameter-object-binding-pattern"
+    }
+  ],
+  "repository": {
+   "parameter-object-binding-pattern": {
+			"begin": "\\(\\s*(?:(\\.\\.\\.)\\s*)?(\\{)\\s*",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.operator.rest.js"
+				},
+				"2": {
+					"name": "punctuation.definition.binding-pattern.object.js"
+				}
+			},
+			"end": "\\}",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.binding-pattern.object.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "source.js#parameter-object-binding-element"
+				}
+			]
+		}
+  }
+}

@@ -28,6 +28,13 @@
                 "uiTheme": "vs-dark",
                 "path": "./themes/potion-color-theme.json"
             }
+        ],
+        "grammars": [
+            {
+                "scopeName": "source.js.potion",
+                "injectTo": ["source.js"],
+                "path": "./syntaxes/javascript.tmLanguage.json"
+            }
         ]
     }
 }

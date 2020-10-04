@@ -2,6 +2,11 @@
 
 All notable changes to the "material-potion" colour theme will be documented in this file. The theme is merely customized according to personal tastes.
 
+## [0.0.6]
+
+- Fixed vscode bug which occurs on destructured properties when keys are applied on a newline within a arrow function parenthesis.
+
+
 ## [0.0.5]
 
 - Update Logo

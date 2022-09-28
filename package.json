@@ -1,40 +1,39 @@
 {
-    "name": "material-potion",
-    "publisher": "sissel",
-    "displayName": "Potion Theme",
-    "description": "A dark material/monokai variation color theme for vscode.",
-    "version": "0.0.6",
-    "icon": "logo.png",
-    "author": "Nikolas Savvidis <nicos@gmx.com>",
-    "license": "CC-BY-NC-ND-4.0",
-    "keywords": ["theme", "material potion", "potion", "monokai", "dark"],
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/panoply/vscode-potion-theme.git"
-    },
-    "bugs": {
-      "url": "https://github.com/panoply/vscode-potion-theme/issues"
-    },
-    "engines": {
-        "vscode": "^1.44.0"
-    },
-    "categories": [
-        "Themes"
-    ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "Potion Theme",
-                "uiTheme": "vs-dark",
-                "path": "./themes/potion-color-theme.json"
-            }
-        ],
-        "grammars": [
-            {
-                "scopeName": "source.js.potion",
-                "injectTo": ["source.js"],
-                "path": "./syntaxes/javascript.tmLanguage.json"
-            }
-        ]
-    }
+  "name": "material-potion",
+  "publisher": "sissel",
+  "displayName": "Potion Theme",
+  "description": "A dark material/monokai variation color theme for vscode.",
+  "version": "0.0.7",
+  "icon": "logo.png",
+  "author": "Nikolas Savvidis <nicos@gmx.com>",
+  "license": "CC-BY-NC-ND-4.0",
+  "keywords": [
+    "theme",
+    "material potion",
+    "potion",
+    "monokai",
+    "dark"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panoply/vscode-potion-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/panoply/vscode-potion-theme/issues"
+  },
+  "engines": {
+    "vscode": "^1.44.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Potion Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/potion-color-theme.json"
+      }
+    ]
+  }
 }

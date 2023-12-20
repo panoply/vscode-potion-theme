@@ -1,0 +1,19 @@
+.someClass {
+  font-family: serif;
+}
+
+#someID {
+  background: yellow;
+}
+
+::after {
+  cursor: alias;
+}
+
+.another-call:not(.example) {
+  padding: 20rem;
+}
+
+main {
+  margin-top: 20px;
+}

@@ -2,6 +2,13 @@
 
 All notable changes to the "material-potion" colour theme will be documented in this file. The theme is merely customized according to personal tastes.
 
+## [0.0.8]
+
+- Various character enhancement and some mild adjustments to certain TypeScript syntactics.
+- Enhancements for `.toml` files.
+- Enhancements for `.liquid` files.
+- Pseudo CSS class characters such as `:has` or `::after` etc apply colors
+
 ## [0.0.7]
 
 - Small update with latest refinements

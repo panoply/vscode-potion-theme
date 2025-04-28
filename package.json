@@ -2,11 +2,11 @@
   "name": "material-potion",
   "publisher": "sissel",
   "displayName": "Potion Theme",
-  "description": "A dark material/monokai variation color theme for vscode.",
-  "version": "0.0.8",
+  "description": "A cosmic pastel based theme on a obsidian black workspace.",
+  "version": "0.1.0",
   "icon": "logo.png",
   "author": "Nikolas Savvidis <nicos@gmx.com>",
-  "license": "CC-BY-NC-ND-4.0",
+  "license": "Apache-2.0",
   "keywords": [
     "theme",
     "material potion",
@@ -27,13 +27,20 @@
   "categories": [
     "Themes"
   ],
+  "scripts": {
+    "dev": "node ./build.mjs watch",
+    "build": "node ./build.mjs"
+  },
   "contributes": {
     "themes": [
       {
         "label": "Potion Theme",
         "uiTheme": "vs-dark",
-        "path": "./themes/potion-color-theme.json"
+        "path": "./themes/potion.color-theme.json"
       }
     ]
+  },
+  "devDependencies": {
+    "strip-json-comments": "^5.0.1"
   }
 }

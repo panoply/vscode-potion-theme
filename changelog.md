@@ -2,6 +2,13 @@
 
 All notable changes to the "material-potion" colour theme will be documented in this file. The theme is merely customized according to personal tastes.
 
+## [0.1.0]
+
+- Major overhaul
+- Introduces partial syntax tokens which build
+- Improves various languages
+- Added Screenshots
+
 ## [0.0.8]
 
 - Various character enhancement and some mild adjustments to certain TypeScript syntactics.

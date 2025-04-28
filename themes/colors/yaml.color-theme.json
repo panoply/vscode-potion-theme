@@ -1,0 +1,108 @@
+{
+  "tokenColors": [
+    {
+      "scope": [
+        "entity.name.tag.yaml"
+      ],
+      "settings": {
+        "foreground": "#FF93BC"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.separator.key-value.mapping.yaml",
+        "punctuation.definition.block.sequence.item.yaml",
+        "punctuation.definition.map.key.yaml"
+      ],
+      "settings": {
+        "foreground": "#F92672"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.separator.map.value.yaml",
+        "punctuation.separator.key-value.mapping.yaml"
+      ],
+      "settings": {
+        "foreground": "#becaffb4",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "constant.numeric.float.yaml",
+        "constant.numeric.integer.decimal.yaml",
+        "constant.numeric.integer.yaml"
+      ],
+      "settings": {
+        "foreground": "#A96EE4"
+      }
+    },
+    {
+      "scope": [
+        "constant.language.null.yaml"
+      ],
+      "settings": {
+        "foreground": "#4290f8"
+      }
+    },
+    {
+      "scope": [
+        "string.quoted.double.yaml"
+      ],
+      "settings": {
+        "foreground": "#FFF78C",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "string.unquoted.plain.out.yaml",
+        "string.quoted.single.yaml",
+        "punctuation.separator.key-value.mapping.yaml",
+        "punctuation.definition.block.sequence.item.yaml"
+      ],
+      "settings": {}
+    },
+    {
+      "scope": [
+        "entity.name.tag.yaml"
+      ],
+      "settings": {
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "variable.other.alias.yaml",
+        "punctuation.definition.alias.yaml",
+        "punctuation.definition.anchor.yaml",
+        "variable.other.anchor.yaml",
+        "punctuation.definition.tag.secondary.yaml",
+        "storage.type.tag.shorthand.yaml",
+        "storage.type.tag-handle.yaml",
+        "entity.name.type.anchor.yaml"
+      ],
+      "settings": {
+        "foreground": "#9EE34F"
+      }
+    },
+    {
+      "scope": [
+        "constant.language.boolean.yaml"
+      ],
+      "settings": {
+        "foreground": "#ff30ee"
+      }
+    },
+    {
+      "scope": [
+        "entity.other.document.begin.yaml",
+        "entity.other.document.end.yaml"
+      ],
+      "settings": {
+        "foreground": "#FFAB40"
+      }
+    }
+  ]
+}

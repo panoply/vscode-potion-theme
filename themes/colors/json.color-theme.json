@@ -1,0 +1,24 @@
+{
+  "tokenColors": [
+    {
+      "scope": [
+        "punctuation.definition.string.begin.json",
+        "punctuation.definition.string.end.json"
+      ],
+      "settings": {
+        "foreground": "#81D4FA"
+      }
+    },
+    /* -------------------------------------------- */
+    /* CONSTANT                                     */
+    /* -------------------------------------------- */
+    {
+      "scope": [
+        "constant.language.json"
+      ],
+      "settings": {
+        "foreground": "#FF80F4"
+      }
+    },
+  ]
+}

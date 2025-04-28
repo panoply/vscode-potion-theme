@@ -1,0 +1,42 @@
+{
+  "tokenColors": [
+    {
+      "scope": [
+        "punctuation.definition.array.table.toml",
+        "punctuation.definition.table.toml",
+        "punctuation.definition.array.toml",
+        "punctuation.definition.table.inline.toml",
+        "string.quoted.triple.literal.block.toml"
+      ],
+      "settings": {
+        "foreground": "#FFAB40"
+      }
+    },
+    {
+      "scope": [
+        "variable.key.toml",
+        "punctuation.eq.toml"
+      ],
+      "settings": {
+        "foreground": "#F92672"
+      }
+    },
+    {
+      "scope": [
+        "variable.key.table.toml",
+        "variable.key.array.table.toml",
+        "support.type.property-name.toml"
+      ],
+      "settings": {
+        "foreground": "#8BD3FD",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "constant.numeric.integer.toml",
+      "settings": {
+        "foreground": "#A96EE4"
+      }
+    }
+  ]
+}

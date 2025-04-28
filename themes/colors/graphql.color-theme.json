@@ -1,0 +1,83 @@
+{
+  "tokenColors": [
+    {
+      "scope": [
+        "punctuation.colon.graphql",
+        "punctuation.graphql"
+      ],
+      "settings": {
+        "foreground": "#F92672"
+      }
+    },
+    {
+      "scope": [
+        "variable.parameter.graphql"
+      ],
+      "settings": {
+        "foreground": "#FFAB40",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "punctuation.comma.graphql",
+        "meta.selectionset.graphql variable.graphql",
+        "meta.selectionset.graphql meta.selectionset.graphql meta.selectionset.graphql variable.graphql",
+        "meta.selectionset.graphql meta.selectionset.graphql meta.selectionset.graphql meta.selectionset.graphql meta.selectionset.graphql meta.selectionset.graphql variable.graphql"
+      ],
+      "settings": {
+        "foreground": "#FAFAFA"
+      }
+    },
+    {
+      "scope": [
+        "meta.arguments.graphql variable.graphql"
+      ],
+      "settings": {
+        "foreground": "#EA2AFF"
+      }
+    },
+    {
+      "scope": [
+        "meta.selectionset.graphql meta.selectionset.graphql variable.graphql",
+        "meta.selectionset.graphql meta.selectionset.graphql meta.selectionset.graphql meta.selectionset.graphql variable.graphql"
+      ],
+      "settings": {
+        "foreground": "#FBEB93"
+      }
+    },
+    {
+      "scope": [
+        "meta.selectionset.graphql support.type.graphql"
+      ],
+      "settings": {
+        "foreground": "#9EE34F"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.function.graphql"
+      ],
+      "settings": {
+        "foreground": "#AC8DE7"
+      }
+    },
+    {
+      "scope": [
+        "keyword.operation.graphql"
+      ],
+      "settings": {
+        "foreground": "#FF7DFB"
+      }
+    },
+    {
+      "scope": [
+        "support.type.builtin.graphql",
+        "support.type.graphql"
+      ],
+      "settings": {
+        "fontStyle": ""
+      }
+    }
+  ]
+}

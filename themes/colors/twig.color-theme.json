@@ -1,0 +1,61 @@
+{
+  "tokenColors": [
+    {
+      "scope": [
+        "meta.tag.template.value.twig",
+        "meta.tag.template.block.twig"
+      ],
+      "settings": {
+        "foreground": "#CD5AC5"
+      }
+    },
+    {
+      "scope": "keyword.control.twig",
+      "settings": {
+        "foreground": "#E05D8C"
+      }
+    },
+    {
+      "scope": "variable.other.twig",
+      "settings": {
+        "foreground": "#E5A5E0"
+      }
+    },
+    {
+      "scope": "variable.other.property.twig",
+      "settings": {
+        "foreground": "#FFE1FC"
+      }
+    },
+    {
+      "scope": "constant.language.twig",
+      "settings": {
+        "foreground": "#FFD2A6"
+      }
+    },
+    {
+      "scope": "constant.numeric.twig",
+      "settings": {
+        "foreground": "#FFD0FB"
+      }
+    },
+    {
+      "scope": "support.function.twig",
+      "settings": {
+        "foreground": "#90E7F7"
+      }
+    },
+    {
+      "scope": "meta.function-call.other.twig",
+      "settings": {
+        "foreground": "#FAB85A"
+      }
+    },
+    {
+      "scope": "meta.function-call.twig",
+      "settings": {
+        "foreground": "#FAB85A"
+      }
+    }
+  ]
+}

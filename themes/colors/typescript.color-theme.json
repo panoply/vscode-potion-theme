@@ -1,0 +1,178 @@
+{
+  "tokenColors": [
+    {
+      "scope": [
+        "storage.type.type.ts",
+        "storage.modifier.ts",
+        "storage.type.function.arrow.ts",
+        "keyword.control.import.ts",
+        "keyword.operator.logical.ts",
+        "keyword.operator.expression.keyof.ts",
+        "punctuation.separator.key-value.ts",
+        "punctuation.accessor.ts",
+        "punctuation.destructuring.ts",
+        "punctuation.accessor.optional.ts",
+        "punctuation.separator.comma.ts",
+        "punctuation.separator.label.ts",
+        "variable.language.super.ts",
+        "punctuation.definition.string.template.begin.ts",
+        "punctuation.definition.string.template.end.ts"
+      ],
+      "settings": {
+        "foreground": "#F92672"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.type.module.ts",
+        "storage.type.ts",
+        "storage.type.interface.ts",
+        "storage.type.class.ts",
+        "storage.type.function.ts",
+        "storage.type.namespace.ts",
+        "support.type.builtin.ts",
+        "storage.type.enum.ts",
+        "support.class.builtin.ts",
+        "support.class.promise.ts",
+        "support.type.primitive.ts",
+        "variable.other.enummember.ts",
+        "variable.other.object.ts",
+      ],
+      "settings": {
+        "foreground": "#8BD3FD",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "meta.namespace.declaration.ts entity.name.type.module.ts",
+      "settings": {
+        "foreground": "#f2f2f2"
+      }
+    },
+    {
+      "scope": [
+        "variable.language.this.ts",
+        "variable.parameter.ts",
+        "variable.other.readwrite.ts meta.array.literal.ts",
+        "variable.language.super.ts"
+      ],
+      "settings": {
+        "foreground": "#FFAB40"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.template-expression.begin.ts",
+        "punctuation.definition.template-expression.end.ts"
+      ],
+      "settings": {
+        "foreground": "#26F9E7"
+      }
+    },
+    {
+      "scope": [
+        "string.quoted.single.ts"
+      ],
+      "settings": {
+        "foreground": "#F5EC70"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.function.ts",
+        "support.function.dom.ts",
+      ],
+      "settings": {
+        "foreground": "#9EE34F"
+      }
+    },
+    {
+      "scope": [
+        "meta.object-literal.key.ts"
+      ],
+      "settings": {
+        "foreground": "#01DDECE3"
+      }
+    },
+    {
+      "scope": [
+        "meta.decorator.ts punctuation.decorator.ts",
+        "meta.decorator.ts variable.other.readwrite.ts"
+      ],
+      "settings": {
+        "foreground": "#5bca6a"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.typeparameters.begin.ts",
+        "punctuation.definition.typeparameters.end.ts",
+        "storage.type.numeric.bigint.ts"
+      ],
+      "settings": {
+        "foreground": "#C7C7C7B4"
+      }
+    },
+    {
+      "scope": [
+        "constant.numeric.decimal.ts"
+      ],
+      "settings": {
+        "foreground": "#A96EE4"
+      }
+    },
+    {
+      "scope": [
+        "string.quoted.single.ts",
+        "string.quoted.double.ts",
+        "string.template.ts"
+      ],
+      "settings": {
+        "foreground": "#FBEB93"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.label.ts",
+      ],
+      "settings": {
+        "foreground": "#F279FF"
+      }
+    },
+    {
+      "scope": [
+        "meta.type.tuple.ts punctuation.separator.label.ts",
+      ],
+      "settings": {
+        "foreground": "#FFFFFF"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.string.begin.ts",
+        "punctuation.definition.string.end.ts",
+        "entity.other.inherited-class.ts"
+      ],
+      "settings": {
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.terminator.statement.ts"
+      ],
+      "settings": {
+        "foreground": "#ffffff",
+      }
+    },
+    {
+      "scope": [
+        "constant.language.boolean.true.ts",
+        "constant.language.boolean.false.ts"
+      ],
+      "settings": {
+        "foreground": "#ff30ee"
+      }
+    }
+  ]
+}

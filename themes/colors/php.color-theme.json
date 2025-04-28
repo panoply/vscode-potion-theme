@@ -1,0 +1,22 @@
+{
+  "tokenColors": [
+    {
+      "scope": "support.other.namespace.use-as.php",
+      "settings": {
+        "foreground": "#81D4FA"
+      }
+    },
+    {
+      "scope": "variable.language.namespace.php",
+      "settings": {
+        "foreground": "#D66990"
+      }
+    },
+    {
+      "scope": "punctuation.separator.inheritance.php",
+      "settings": {
+        "foreground": "#E91E63"
+      }
+    },
+  ]
+}

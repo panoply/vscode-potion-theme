@@ -1,0 +1,89 @@
+{
+  "tokenColors": [
+    /* -------------------------------------------- */
+    /* PUNCTUATION                                  */
+    /* -------------------------------------------- */
+    {
+      "scope": [
+        "string.quoted.double.html punctuation.definition.tag.begin.liquid",
+        "string.quoted.double.html punctuation.definition.tag.end.liquid"
+      ],
+      "settings": {
+        "foreground": "#B1B1B1"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.separator.pipe.liquid"
+      ],
+      "settings": {
+        "foreground": "#F92672"
+      }
+    },
+    /* -------------------------------------------- */
+    /* STRING                                       */
+    /* -------------------------------------------- */
+    {
+      "scope": [
+        "source.liquid string.quoted.single.html",
+        "source.liquid string.quoted.double.html"
+      ],
+      "settings": {
+        "foreground": "#FFF9A6"
+      }
+    },
+    /* -------------------------------------------- */
+    /* SUPPORT                                      */
+    /* -------------------------------------------- */
+    {
+      "scope": [
+        "support.function.filter.liquid"
+      ],
+      "settings": {
+        "foreground": "#5CD7E0D5"
+      }
+    },
+    /* -------------------------------------------- */
+    /* ENTITY                                       */
+    /* -------------------------------------------- */
+    {
+      "scope": [
+        "entity.name.tag.liquid",
+      ],
+      "settings": {
+        "foreground": "#F92672"
+      }
+    },
+    /* -------------------------------------------- */
+    /* CONSTANT                                     */
+    /* -------------------------------------------- */
+    {
+      "scope": [
+        "constant.numeric.property-value.liquid"
+      ],
+      "settings": {
+        "foreground": "#978FFF"
+      }
+    },
+    {
+      "scope": [
+        "constant.language.liquid",
+      ],
+      "settings": {
+        "foreground": "#FF80F4"
+      }
+    },
+    {
+      "scope": "constant.numeric.property-value.liquid",
+      "settings": {
+        "foreground": "#978FFF"
+      }
+    },
+    {
+      "scope": "support.function.filter.liquid",
+      "settings": {
+        "foreground": "#5CD7E0D5"
+      }
+    },
+  ]
+}

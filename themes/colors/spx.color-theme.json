@@ -1,0 +1,50 @@
+{
+  "tokenColors": [
+    {
+      "scope": [
+        "support.class.spx.html"
+      ],
+      "settings": {
+        "foreground": "#81D4FA",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "support.function.spx.html",
+        "keyword.control.class.html"
+      ],
+      "settings": {
+        "foreground": "#FFFFFF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "support.type.property-name.spx.html"
+      ],
+      "settings": {
+        "foreground": "#FFFFFF",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "entity.name.function.spx.html"
+      ],
+      "settings": {
+        "foreground": "#9EE34F",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "constant.numeric.decimal.spx.html"
+      ],
+      "settings": {
+        "foreground": "#FB8943",
+        "fontStyle": ""
+      }
+    },
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "tokenColors": [
+    {
+      "scope": [
+        "punctuation.definition.bracket.curly.begin.jsdoc",
+        "punctuation.definition.bracket.curly.end.jsdoc"
+      ],
+      "settings": {
+        "foreground": "#66D8EFC9",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "punctuation.definition.optional-value.end.bracket.square.jsdoc",
+      "settings": {
+        "foreground": "#888888",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "variable.other.jsdoc",
+      "settings": {
+        "foreground": "#C7C4C4"
+      }
+    },
+    {
+      "scope": "storage.type.class.jsdoc",
+      "settings": {
+        "foreground": "#8BD3FD",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "variable.other.jsdoc",
+      "settings": {
+        "foreground": "#7894ad"
+      }
+    },
+    {
+      "scope": [
+        "variable.other.jsdoc source.embedded.ts"
+      ],
+      "settings": {
+        "foreground": "#aa834c"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.type.instance.jsdoc"
+      ],
+      "settings": {
+        "foreground": "#C7C4C4"
+      }
+    },
+    {
+      "scope": "constant.other.email.link.underline.jsdoc",
+      "settings": {
+        "foreground": "#b26b7a"
+      }
+    }
+  ]
+}

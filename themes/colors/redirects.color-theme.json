@@ -1,0 +1,24 @@
+{
+  "tokenColors": [
+    {
+      "scope": "meta.uri.from.redirects",
+      "settings": {
+        "foreground": "#93FD97",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "meta.uri.to.redirects",
+      "settings": {
+        "foreground": "#A793FD",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "markup.splat.redirects",
+      "settings": {
+        "foreground": "#888888"
+      }
+    }
+  ]
+}

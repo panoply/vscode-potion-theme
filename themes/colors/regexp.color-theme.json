@@ -1,0 +1,66 @@
+{
+  "tokenColors": [
+    /* -------------------------------------------- */
+    /* PUNCTUATION                                  */
+    /* -------------------------------------------- */
+    {
+      "scope": [
+        "punctuation.definition.group.no-capture.regexp"
+      ],
+      "settings": {
+        "foreground": "#F83EDF"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.group.regexp"
+      ],
+      "settings": {
+        "foreground": "#6BFFF8"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.definition.character-class.regexp"
+      ],
+      "settings": {
+        "foreground": "#DB6767",
+        "fontStyle": "bold"
+      }
+    },
+    /* -------------------------------------------- */
+    /* CONSTANT                                     */
+    /* -------------------------------------------- */
+    {
+      "scope": [
+        "constant.other.character-class.regexp"
+      ],
+      "settings": {
+        "foreground": "#AE81FF"
+      }
+    },
+    /* -------------------------------------------- */
+    /* KEYWORD                                      */
+    /* -------------------------------------------- */
+    {
+      "scope": [
+        "keyword.operator.quantifier.regexp"
+      ],
+      "settings": {
+        "foreground": "#F83EDF"
+      }
+    },
+    /* -------------------------------------------- */
+    /* META                                         */
+    /* -------------------------------------------- */
+    {
+      "scope": [
+        "meta.assertion.look-behind.regexp",
+        "meta.assertion.look-ahead.regexp"
+      ],
+      "settings": {
+        "foreground": "#3AF59E"
+      }
+    }
+  ]
+}

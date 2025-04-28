@@ -1,0 +1,217 @@
+{
+  "tokenColors": [
+    {
+      "scope": "comment",
+      "settings": {
+        "foreground": "#888888"
+      }
+    },
+    {
+      "scope": "string",
+      "settings": {
+        "foreground": "#FFF59D"
+      }
+    },
+    {
+      "scope": "variable",
+      "settings": {
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "keyword",
+      "settings": {
+        "foreground": "#F92672"
+      }
+    },
+    {
+      "scope": "storage",
+      "settings": {
+        "foreground": "#F92672",
+        "fontStyle": ""
+      }
+    },
+    /* -------------------------------------------- */
+    /* CONSTANT                                     */
+    /* -------------------------------------------- */
+    {
+      "scope": [
+        "constant.numeric"
+      ],
+      "settings": {
+        "foreground": "#F48FB1"
+      }
+    },
+    {
+      "scope": [
+        "constant.language"
+      ],
+      "settings": {
+        "foreground": "#F48FB1"
+      }
+    },
+    {
+      "scope": [
+        "constant.character",
+        "constant.other"
+      ],
+      "settings": {
+        "foreground": "#F48FB1"
+      }
+    },
+    /* -------------------------------------------- */
+    /* ENTITY                                       */
+    /* -------------------------------------------- */
+    {
+      "scope": "entity.name.class",
+      "settings": {
+        "foreground": "#9EE34F",
+        "fontStyle": "underline"
+      }
+    },
+    {
+      "scope": "entity.other.inherited-class",
+      "settings": {
+        "foreground": "#9EE34F",
+        "fontStyle": "italic underline"
+      }
+    },
+    {
+      "scope": "entity.name.function",
+      "settings": {
+        "foreground": "#9EE34F",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "entity.name.tag",
+      "settings": {
+        "foreground": "#F92672",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "entity.other.attribute-name",
+      "settings": {
+        "foreground": "#9EE34F",
+        "fontStyle": ""
+      }
+    },
+    /* -------------------------------------------- */
+    /* SUPPORT                                      */
+    /* -------------------------------------------- */
+    {
+      "scope": [
+        "support.function"
+      ],
+      "settings": {
+        "foreground": "#81D4FA",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "support.constant"
+      ],
+      "settings": {
+        "foreground": "#81D4FA",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "support.type",
+        "support.class"
+      ],
+      "settings": {
+        "foreground": "#81D4FA",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "support.other.variable"
+      ],
+      "settings": {
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "support.other.namespace",
+        "entity.name.type.namespace"
+      ],
+      "settings": {
+        "foreground": "#FFB2F9"
+      }
+    },
+    {
+      "scope": [
+        "string.template meta.template.expression"
+      ],
+      "settings": {
+        "foreground": "#FFFFFF"
+      }
+    },
+    {
+      "scope": "invalid",
+      "settings": {
+        "foreground": "#F8F8F0",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": "invalid.deprecated",
+      "settings": {
+        "foreground": "#F8F8F0"
+      }
+    },
+    {
+      "scope": "text source",
+      "settings": {}
+    },
+    {
+      "scope": [
+        "meta.diff",
+        "meta.diff.header"
+      ],
+      "settings": {
+        "foreground": "#E0EDDD",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": [
+        "meta.diff",
+        "meta.diff.range"
+      ],
+      "settings": {
+        "foreground": "#3BC0F0"
+      }
+    },
+    {
+      "scope": "token.info-token",
+      "settings": {
+        "foreground": "#6796E6"
+      }
+    },
+    {
+      "scope": "token.warn-token",
+      "settings": {
+        "foreground": "#CD9731"
+      }
+    },
+    {
+      "scope": "token.error-token",
+      "settings": {
+        "foreground": "#F44747"
+      }
+    },
+    {
+      "scope": "token.debug-token",
+      "settings": {
+        "foreground": "#B267E6"
+      }
+    },
+  ]
+}

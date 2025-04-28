@@ -4,6 +4,8 @@ Potion is code Caravaggio. Theming with cosmic pastel based colours on an obsidi
 
 ## Previews
 
+Toggle to see screenshots of Potion applied to different languages.
+
 <details>
 <summary>
 <strong>CSS</strong>

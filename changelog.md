@@ -2,6 +2,11 @@
 
 All notable changes to the "material-potion" colour theme will be documented in this file. The theme is merely customized according to personal tastes.
 
+## [0.1.1]
+
+- Updated Marketplace icon
+
+
 ## [0.1.0]
 
 - Major overhaul

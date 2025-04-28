@@ -1,0 +1,126 @@
+# Basic key-value pairs
+name: Example Project
+version: 1.0.0
+description: "This is an example of a YAML file."
+
+# Scalars
+integer: 42
+float: 3.1415
+boolean_true: true
+boolean_false: false
+null_value: null
+string: "Hello, World!"
+multi_line_string: |
+  This is a multi-line
+  string in YAML.
+folded_string: >
+  This is a folded
+  string that will become
+  a single line.
+
+# Sequences (Lists)
+items:
+  - apple
+  - banana
+  - cherry
+
+# Nested Sequences
+fruits:
+  - name: apple
+    color: red
+  - name: banana
+    color: yellow
+
+# Mappings (Dictionaries)
+address:
+  street: 123 Main St
+  city: Anytown
+  zip: 12345
+
+# Inline Lists and Maps
+inline_list: [cat, dog, bird]
+inline_map: {name: John, age: 30}
+
+# Complex nested structure
+person:
+  name: Jane Doe
+  age: 29
+  contact:
+    email: jane@example.com
+    phone: 123-456-7890
+  hobbies:
+    - reading
+    - hiking
+    - painting
+
+# Anchors and Aliases
+default: &default
+  country: USA
+  language: English
+
+user1:
+  <<: *default
+  name: Alice
+
+user2:
+  <<: *default
+  name: Bob
+
+# Ordered maps (YAML 1.1 feature)
+ordered_map: !!omap
+  - one: 1
+  - two: 2
+  - three: 3
+
+# Binary data
+binary_data: !!binary |
+  R0lGODdhEAYEAA7
+
+# Timestamps
+created_at: 2023-04-01T12:30:00Z
+
+# Explicit types
+explicit_integer: !!int "42"
+explicit_float: !!float "3.1415"
+explicit_bool: !!bool "true"
+explicit_str: !!str 12345
+
+# Merge keys
+base: &base
+  a: 1
+  b: 2
+
+merge_example:
+  <<: *base
+  c: 3
+
+# Multi-document file (separated by ---)
+---
+document1:
+  title: First Document
+---
+document2:
+  title: Second Document
+---
+document3:
+  title: Third Document
+
+# Comments
+# This is a comment
+# Another comment explaining something
+
+# Special characters
+special_chars: "!@#$%^&*()_+-=[]{}|;':,.<>/?`~"
+
+# Complex example mixing everything
+complex:
+  - name: Item 1
+    tags: [alpha, beta]
+    properties:
+      key1: value1
+      key2: value2
+  - name: Item 2
+    tags: [gamma, delta]
+    properties:
+      keyA: valueA
+      keyB: valueB

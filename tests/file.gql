@@ -1,0 +1,199 @@
+# Query operation
+query GetUser($id: ID!) {
+  user(id: $id) {
+    id
+    name
+    email
+    friends(first: 5) {
+      edges {
+        node {
+          id
+          name
+        }
+      }
+    }
+  }
+}
+
+# Mutation operation
+mutation CreateUser($input: CreateUserInput!) {
+  createUser(input: $input) {
+    user {
+      id
+      name
+    }
+    errors {
+      field
+      message
+    }
+  }
+}
+
+# Subscription operation
+subscription OnNewMessage {
+  messageSent {
+    id
+    content
+    sender {
+      id
+      username
+    }
+  }
+}
+
+# Fragments
+fragment UserFields on User {
+  id
+  name
+  email
+}
+
+fragment FriendFields on Friend {
+  id
+  name
+}
+
+# Using fragments
+query GetUserWithFriends($id: ID!) {
+  user(id: $id) {
+    ...UserFields
+    friends {
+      ...FriendFields
+    }
+  }
+}
+
+# Variables
+query SearchUsers($searchTerm: String!, $limit: Int = 10) {
+  searchUsers(term: $searchTerm, limit: $limit) {
+    id
+    name
+  }
+}
+
+# Aliases
+query AliasedFields {
+  user: currentUser {
+    userId: id
+    userName: name
+  }
+}
+
+# Directives
+query GetUserWithDirective($withEmail: Boolean!) {
+  user(id: "123") {
+    id
+    name
+    email @include(if: $withEmail)
+  }
+}
+
+# Inline fragments
+query Search($term: String!) {
+  search(term: $term) {
+    ... on User {
+      id
+      name
+    }
+    ... on Post {
+      id
+      title
+    }
+  }
+}
+
+# Schema Definition
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
+
+# Type Definitions
+type Query {
+  user(id: ID!): User
+  search(term: String!): [SearchResult!]!
+}
+
+type Mutation {
+  createUser(input: CreateUserInput!): CreateUserPayload
+}
+
+type Subscription {
+  messageSent: Message
+}
+
+# Custom types
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  friends(first: Int): FriendConnection
+}
+
+type FriendConnection {
+  edges: [FriendEdge]
+}
+
+type FriendEdge {
+  node: Friend
+}
+
+type Friend {
+  id: ID!
+  name: String!
+}
+
+type Message {
+  id: ID!
+  content: String!
+  sender: User!
+}
+
+# Input types
+input CreateUserInput {
+  name: String!
+  email: String!
+}
+
+# Payload types
+type CreateUserPayload {
+  user: User
+  errors: [Error]
+}
+
+type Error {
+  field: String
+  message: String
+}
+
+# Enums
+enum Role {
+  ADMIN
+  USER
+  GUEST
+}
+
+# Scalars
+scalar DateTime
+scalar JSON
+
+# Unions
+union SearchResult = User | Post
+
+# Interface
+interface Node {
+  id: ID!
+}
+
+# Implementing Interface
+type Post implements Node {
+  id: ID!
+  title: String!
+  content: String
+}
+
+# Extend types
+extend type User {
+  age: Int
+}

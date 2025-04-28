@@ -1,19 +1,312 @@
-.someClass {
-  font-family: serif;
+/* --- Basic Selectors --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-#someID {
+/* --- Grouped Selectors --- */
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+/* --- Descendant / Child / Sibling --- */
+nav ul li > a + span {
+  color: blue;
+}
+
+/* --- Universal Selector --- */
+* {
+  box-sizing: border-box;
+}
+
+/* --- Attribute Selectors --- */
+input[type="text"] {
+  border: 1px solid #ccc;
+}
+
+a[href^="https"] {
+  color: green;
+}
+
+img[alt*="cat"] {
+  border: 2px dashed red;
+}
+
+/* --- Pseudo-classes --- */
+a:hover {
+  text-decoration: underline;
+}
+
+input:focus {
+  border-color: blue;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+p:only-child {
+  color: purple;
+}
+
+div:empty {
+  display: none;
+}
+
+input:checked {
   background: yellow;
 }
 
-::after {
-  cursor: alias;
+input:disabled {
+  opacity: 0.5;
 }
 
-.another-call:not(.example) {
-  padding: 20rem;
+tr:nth-child(even) {
+  background: #f0f0f0;
 }
 
-main {
-  margin-top: 20px;
+/* --- Pseudo-elements --- */
+p::first-line {
+  font-variant: small-caps;
+}
+
+p::before {
+  content: "Note: ";
+  color: red;
+}
+
+p::after {
+  content: " ✔️";
+}
+
+/* --- Combinators --- */
+div > p {
+  margin: 10px;
+}
+
+h1 + p {
+  margin-top: 5px;
+}
+
+ul ~ p {
+  color: gray;
+}
+
+/* --- Variables (Custom Properties) --- */
+:root {
+  --main-color: #3498db;
+  --padding: 1rem;
+}
+
+button {
+  background-color: var(--main-color);
+  padding: var(--padding);
+}
+
+/* --- Calc, Clamp, Min, Max Functions --- */
+section {
+  width: calc(100% - 2rem);
+  font-size: clamp(1rem, 2vw, 2rem);
+  min-height: min(90vh, 800px);
+  max-width: max(600px, 50%);
+}
+
+/* --- Media Queries --- */
+@media (max-width: 768px) {
+  body {
+    background: #f9f9f9;
+  }
+}
+
+/* --- Custom Media Queries (future spec) --- */
+@custom-media --small-viewport (max-width: 600px);
+
+@media (--small-viewport) {
+  nav {
+    display: none;
+  }
+}
+
+/* --- Container Queries (CSS Containment) --- */
+@container (min-width: 400px) {
+  .card {
+    display: flex;
+  }
+}
+
+/* --- Nesting (CSS Nesting Module) --- */
+.card {
+  padding: 1rem;
+
+  & h2 {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    background: lightgray;
+  }
+}
+
+/* --- Grid Layout --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* --- Flexbox Layout --- */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Animations --- */
+@keyframes slidein {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.banner {
+  animation: slidein 1s ease-in-out forwards;
+}
+
+/* --- Transitions --- */
+button {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  color: rgba(red, green, blue, alpha);
+}
+
+/* --- Filters --- */
+img {
+  filter: grayscale(50%) brightness(120%);
+}
+
+/* --- Backdrop-filter --- */
+.modal {
+  backdrop-filter: blur(10px);
+}
+
+/* --- Clip-path --- */
+.avatar {
+  clip-path: circle(50% at center);
+}
+
+/* --- Shapes (basic) --- */
+.shape {
+  shape-outside: circle();
+  float: left;
+  width: 200px;
+  height: 200px;
+}
+
+/* --- Scroll Snap --- */
+.container {
+  scroll-snap-type: x mandatory;
+}
+
+.item {
+  scroll-snap-align: start;
+}
+
+/* --- Writing Modes --- */
+.vertical-text {
+  writing-mode: vertical-rl;
+}
+
+/* --- Logical Properties --- */
+.box {
+  padding-inline: 1rem;
+  margin-block: 2rem;
+}
+
+/* --- Accent-color --- */
+input[type="checkbox"] {
+  accent-color: hotpink;
+}
+
+/* --- Aspect-ratio --- */
+.responsive {
+  aspect-ratio: 16 / 9;
+}
+
+/* --- Counters --- */
+ol {
+  counter-reset: section;
+}
+
+li::before {
+  counter-increment: section;
+  content: counters(section, ".") " ";
+}
+
+/* --- Viewport Units (lvh, svh, dvh) --- */
+.full-screen {
+  height: 100dvh;
+}
+
+/* --- Font Features --- */
+.text {
+  font-variant-ligatures: discretionary-ligatures;
+}
+
+/* --- Color Functions --- */
+.fancy {
+  background: color-mix(in srgb, red 50%, blue);
+}
+
+/* --- Cascade Layers --- */
+@layer base, components, utilities;
+
+@layer base {
+  body {
+    background: white;
+  }
+}
+
+@layer components {
+  .button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@layer utilities {
+  .text-center {
+    text-align: center;
+  }
+}
+
+/* --- Forced Colors (accessibility) --- */
+@media (forced-colors: active) {
+  button {
+    forced-color-adjust: none;
+    background: ButtonFace;
+  }
+}
+
+/* --- Deprecated/old syntax examples --- */
+.center-text {
+  forced-color-adjust: none;
+  text-align: -webkit-center;
+}
+
+/* --- Important --- */
+.important {
+  color: red !important;
 }

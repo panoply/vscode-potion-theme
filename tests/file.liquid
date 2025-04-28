@@ -1,46 +1,316 @@
-<!DOCTYPE html>
-<html lang="en">
+{% # OBJECT > STRING %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
+{{ page_title }}{{ page_description }}
 
-<body>
-  <div id="app">Tacos Tacos</div>
+{% # OBJECT > NUMERIC %}
 
-  <p>Tacos tacos tacos</p>
-  <!--comment-->
+{{ current_page }}
 
-  <script>
-    var x = '100';
-    x.toString();
+{% # OBJECT > CONSTANT %}
 
-  </script>
+{{ content_for_header }}{{ content_for_layout }}
 
-  <style>
-    .someClass {
-      font-family: serif;
-    }
+{% # OBJECT > DROP %}
 
-    #someID {
-      background: yellow;
-    }
+{{ product }}
+{{ collection }}{{ article }}
 
-    ::after {
-      cursor: alias;
-    }
+{% # OBJECT > PROPERTY DROP %}
 
-    .another-call:not(.example) {
-      padding: 20rem;
-    }
+{{ product.variants }}
+{{ collection.products }}{{ page_image }}
 
-    main {
-      margin-top: 20px;
-    }
-  </style>
-</body>
+{% # OBJECT > PROPERTY DEEP DROP %}
 
-</html>
+{{ article.user.image.src }}
+
+{% # OBJECT > PROPERTY NUMBER %}
+
+{{ product.compare_at_price_max }}{{ product.price_min }}
+
+{% # OBJECT > PROPERTY BOOLEAN %}
+
+{{ product.available }}{{ product.has_only_default_variant }}
+
+{% # OBJECT > PROPERTY STRING %}
+
+{{ product.description }}{{ customer.first_name }}
+
+{% # OBJECT > TAG NAMES SHARED %}
+
+{{ section.block.type }}
+
+{% # UNKNOWN OBJECT > PROPERTY %}
+
+{{ foo.bar }}
+{{ FOO.bar }}
+{{ foo.bar.baz }}
+{{ foo.bar.baz | prepend: foo.bar | append: foo_bar.baz }}{{ foo.bar.baz | prepend: f123.bar | append: foo_bar.baz[foo.bar] }}
+
+{% # UNKNOWN EDGE CASES OBJECT > PROPERTY %}
+
+{{ _foo.bar | prepend: _.bar | append: foo-bar.baz[prop.object.prop] }}{{ object.property_1.collection.name }}
+
+{% # KNOWN OBJECT > PROPERTY DROPS %}
+
+{{ collection.products }}
+{{ article.user.products }}{{ article.user.image.src }}
+
+
+{% # KNOWN OBJECT > PROPERTY NUMBER %}
+
+{{ product.compare_at_price_max }}
+{{ product.price_min }}{{ cart.original_total_price }}
+
+
+{% # KNOWN OBJECT > PROPERTY BOOLEAN %}
+
+{{ product.available }}{{ product.has_only_default_variant }}
+
+{% # KNOWN OBJECT > PROPERTY STRING %}
+
+{{ product.description }}
+{{ customer.first_name }}
+{% # KEYWORDS > NUMBERS MUST NOT HIGHLIGHT  %}
+
+{{ output_1 }}
+{{ output_100 }}
+{{ 2_output }}
+{{ 200_output }}
+{{ output-1 }}
+{{ 1-output }}
+{{ object._2 }}
+{{ object[200] }}
+
+
+{% # NUMBERS  %}
+
+{{ 100 }}
+{{ -100 }}
+{{ +200 }}
+{{ 200.1 }}
+{{ .300.200.2 filter: 200.1 }}
+
+
+{% # STRINGS %}
+
+{{ '100' }}
+{{ "string" }}
+
+{% # CONDITIONALS %}
+
+{% if product.size > 100 %}{% endif %}
+
+{% if 100 > product.size %}{% endif %}
+
+{% if 10.00 > 2.1 %}{% endif %}
+
+{%- comment -%}
+  This is a comment block
+{%- endcomment -%}
+
+{%- assign my_variable = "Hello World" -%}
+{{ my_variable }}
+
+{%- assign number = 5 -%}
+{%- assign multiplied = number | times: 2 -%}
+Result: {{ multiplied }}
+
+{%- assign user = "Jane" -%}
+Welcome, {{ user | upcase }}!
+
+{%- if user == "Jane" -%}
+  Hello Jane!
+{%- elsif user == "John" -%}
+  Hello John!
+{%- else -%}
+  Hello Stranger!
+{%- endif -%}
+
+{%- unless user == "Admin" -%}
+  You are not an admin.
+{%- endunless -%}
+
+{%- case user -%}
+  {%- when "Jane" -%}
+    It's Jane!
+  {%- when "John" -%}
+    It's John!
+{%- else -%}
+    Someone else.
+  {%- endcase -%}
+
+  {%- assign fruits = "apple,banana,cherry" | split: "," -%}
+  <ul>
+    {%- for fruit in fruits -%}
+      <li>{{ fruit | capitalize }}</li>
+    {%- endfor -%}
+  </ul>
+
+  {%- for i in (1..5) -%}
+    Number: {{ i }}
+  {%- endfor -%}
+
+  {%- for product in products -%}
+    {% if forloop.first %}
+      <p>First product: {{ product.name }}</p>
+    {% elsif forloop.last %}
+      <p>Last product: {{ product.name }}</p>
+    {% else %}
+      <p>Another product: {{ product.name }}</p>
+    {% endif %}
+  {%- endfor -%}
+
+  {%- capture greeting -%}
+  Hello, {{ user }}!
+{%- endcapture -%}
+  {{ greeting }}
+
+  {%- raw -%}
+    This block will not be processed by Liquid.
+    {{ this_will_not_be_rendered }}
+  {%- endraw -%}
+
+  {%- include 'product' with product %}
+  {%- render 'collection-grid'  , collection: collection  , grid_item_width: 3 %}
+
+  {%- section 'header' -%}
+  {%- section 'footer' -%}
+
+  {%- form 'customer_login' -%}
+    <input
+    type="email"
+    name="customer[email]"
+    placeholder="Email" />
+  {%- endform -%}
+
+  {%- assign now = 'now' | date: "%Y-%m-%d %H:%M" -%}
+  Current time: {{ now }}
+
+  {%- assign my_array = "one,two,three" | split: "," -%}
+  Array size: {{ my_array.size }}
+
+  {%- assign settings_color = settings.color_primary | default: "#000000" -%}
+  Primary color: {{ settings_color }}
+
+  {%- assign is_active = true -%}
+  {%- if is_active -%}
+    <div class="active">Active!</div>
+  {%- endif -%}
+
+  {%- cycle 'one'  , 'two'  , 'three' -%}
+  {%- cycle 'odd'  , 'even' -%}
+
+  {%- assign cart_total = cart.total_price | money -%}
+  Cart total: {{ cart_total }}
+
+  {%- paginate collection.products by 12 -%}
+    {% for product in collection.products %}
+      <p>{{ product.title }}</p>
+    {% endfor %}
+    {{ paginate | default_pagination }}
+  {%- endpaginate -%}
+
+
+  {% # RENDER TAG %}
+
+{% render 'filename' %}
+
+{% render 'filename', param: article.author %}
+
+{% render 'filename' for array as item %}
+
+{% render 'filename' with product as name, param: collection.products %}
+
+{% render 'filename', param: 1, param2: foo.prop.foo.bar, param3: 'string', param5: false %}
+
+{% # ASSIGNMENT LOGICS %}
+
+{% assign false = false %}
+{% assign true = true %}
+{% assign foo = true %}
+{% assign bar = true %}
+{% assign qux = 'lorem ipsum in back in stock' %}
+
+{{ bar }}
+
+{% if true %}{% endif %}
+
+{% # FOR LOOP %}
+
+{% for product in collection.products limit: 2 %}
+
+  {{ product.title }}
+
+{% endfor %}
+
+
+{% # FOR LOOP INFERRED ARRAY ITERATION %}
+
+{% for variable in inferred %}{% endfor %}
+
+{% for variable in (1..200) %}{% endfor %}
+
+{%- render 'filename', param: 1.20
+ , param2: foo.prop.foo.bar
+ , param3: 'string'
+ , param5: false
+ , param_foo: nil
+ , 123_param: product.available %}
+
+ {%
+  render 'filename',
+   param: 1.20,
+   param2: foo.prop.foo.bar,
+   param3: 'string',
+   param5: false,
+   param_foo: nil,
+   123_param: product.available %}
+
+
+{%- tag %}
+
+{%-
+  tag  -%}
+
+{%
+  unknown
+  param: 1.20,
+  param2: foo.prop.foo.bar,
+  param3: 'string',
+  param5: false,
+  param_foo: nil,
+  123_param: product.available %}
+
+
+{% # CONDITION %}
+
+{% if condition == product.available %}{% elsif condition %}{% endif %}{% case variable %}
+{% when condition == product.available %}{% else %}{% endcase %}
+
+{% # FOR LOOP %}
+
+{% for product in collection.products limit: 2 %}
+
+{{ product.title }}{% endfor %}
+
+
+{% for variable in (collection.products..200) %}
+
+{% endfor %}
+
+{% for variable in (1..200) %}
+
+  expression
+
+{% endfor %}
+
+{% for product in collection.products reversed %}
+
+{{ product.title }}
+
+{% endfor %}
+
+{% for item in collection %}
+
+{% endfor %}

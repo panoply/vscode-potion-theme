@@ -1,0 +1,88 @@
+# Basic key-value pairs
+title = "Example TOML Document"
+version = 1.0
+is_enabled = true
+
+# Integers and floats
+integer = 42
+negative_integer = -42
+float = 3.1415
+negative_float = -2.718
+scientific_notation = 5e2
+hex_number = 0xDEADBEEF
+octal_number = 0o755
+binary_number = 0b1101
+
+# Strings
+string_basic = "Hello, World!"
+string_multiline = """This is a
+multi-line string"""
+string_multiline_literal = '''This is another
+multi-line string'''
+string_with_escape = "Line1\nLine2\tTabbed"
+
+# Literal strings (backslashes are treated literally)
+string_literal = 'C:\Users\Name'
+
+# Dates & Times
+date_time = 2023-04-01T12:30:00Z
+date = 2023-04-01
+time = 12:30:00
+local_date_time = 2023-04-01T12:30:00
+
+# Arrays
+fruits = ["apple", "banana", "cherry"]
+numbers = [1, 2, 3, 4]
+mixed = ["text", 42, 3.14, true]
+nested_arrays = [[1, 2], [3, 4, 5]]
+
+# Tables (objects)
+[owner]
+name = "Alice"
+email = "alice@example.com"
+
+[database]
+server = "192.168.1.1"
+ports = [8000, 8001, 8002]
+connection_max = 100
+enabled = true
+
+# Nested Tables
+[server]
+ip = "192.168.1.1"
+port = 8080
+
+[server.security]
+https = true
+certificate = "/path/to/cert.pem"
+
+# Inline Tables
+person = { name = "Bob", age = 30, email = "bob@example.com" }
+
+# Arrays of Tables
+[[products]]
+name = "Laptop"
+price = 1200.99
+
+[[products]]
+name = "Phone"
+price = 799.99
+
+[[products.specs]]
+cpu = "Intel i7"
+ram = "16GB"
+
+[[products.specs]]
+cpu = "AMD Ryzen 7"
+ram = "32GB"
+
+# Comments
+# This is a comment
+# Another comment line
+
+# Special Characters
+special_chars = "!@#$%^&*()_+-=[]{}|;':,.<>/?`~"
+
+# Boolean Values
+feature_enabled = true
+feature_disabled = false

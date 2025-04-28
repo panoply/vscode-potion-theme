@@ -1,0 +1,42 @@
+# Redirect with a 301
+/home         /              301
+
+# Redirect with a 302
+/my-redirect  /              302
+
+# Show a custom 404 for this path
+/ecommerce    /store-closed  404
+
+# Rewrite a path
+/pass-through /index.html    200
+
+/en/* /en/404.html 404
+/de/* /de/404.html 404
+
+# Force redirects
+
+/best-pets/dogs  /best-pets/cats.html 200!
+
+# Splats
+
+/jobs/customer-ninja-rockstar  /careers/support-engineer
+/jobs/*                        /careers/:splat
+/jobs/outdated-job-link        /careers/position-filled
+/news/*  /blog/:splat
+
+# Placeholders
+
+/news/:month/:date/:year/:slug  /blog/:year/:month/:date/:slug
+
+
+# Both values - ordering from the browser doesn’t matter; this will cover either.
+/path/* param1=:value1 param2=:value2 /otherpath/:value1/:value2/:splat 301
+
+# One value or the other.  Must match exactly.
+/path/* param1=:value1 /otherpath/:value1/:splat 301
+/path/* param2=:value2 /otherpath/:value2/:splat 301
+
+# Base case, when no params are passed.
+# Our system forwards all query params to the /otherpath URL if this is the only rule.
+# Otherwise it matches all requests not matched in a prior rule for the same path such as the ones above.
+/path/* /otherpath/:splat 301

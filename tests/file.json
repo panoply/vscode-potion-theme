@@ -1,0 +1,89 @@
+{
+  "string": "Hello, World!",
+  "number_integer": 42,
+  "number_float": 3.1415,
+  "boolean_true": true,
+  "boolean_false": false,
+  "null_value": null,
+
+  "array_simple": [
+    "apple",
+    "banana",
+    "cherry"
+  ],
+
+  "array_mixed": [
+    "text",
+    123,
+    false,
+    null,
+    {
+      "nested_key": "nested_value"
+    },
+    [
+      1,
+      2,
+      3
+    ]
+  ],
+
+  "object_simple": {
+    "key1": "value1",
+    "key2": "value2"
+  },
+
+  "object_nested": {
+    "level1": {
+      "level2": {
+        "level3": "deep value"
+      }
+    }
+  },
+
+  "empty_array": [],
+  "empty_object": {},
+
+  "special_characters": "!@#$%^&*()_+-=[]{}|;':,.<>/?`~",
+
+  "unicode_characters": "こんにちは世界",
+  "escaped_characters": "Line1\\nLine2\\tTabbed\\\"Quoted\\\"",
+
+  "big_numbers": {
+    "large_integer": 1234567890123456789,
+    "large_float": 1.7976931348623157e+308
+  },
+
+  "dates_as_strings": {
+    "iso_date": "2023-04-01T12:30:00Z",
+    "date_only": "2023-04-01"
+  },
+
+  "boolean_variants": [
+    true,
+    false,
+    true
+  ],
+
+  "nested_mixed": {
+    "array_in_object": [
+      {
+        "name": "Item 1",
+        "price": 9.99
+      },
+      {
+        "name": "Item 2",
+        "price": 19.99
+      }
+    ],
+    "object_in_array": [
+      {
+        "type": "A",
+        "active": true
+      },
+      {
+        "type": "B",
+        "active": false
+      }
+    ]
+  }
+}
